@@ -30,6 +30,12 @@ fit=no">
             </ul>
         </div>
     </nav>
+    {% if request.basket %}
+    <div>
+        {{ request.basket.count }}
+        items in basket
+    </div>
+    {% endif %}
     {% block content %}
     {% endblock content %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
